@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var nativeFetch = (typeof window !== 'undefined' && window.fetch) ? window.fetch.bind(window) : undefined;
+          var _currentFetch = nativeFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Gracefully continue
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Local Business Opportunity Finder</title>
+    <meta name="description" content="AI-powered discovery, compliance auditing, website health, and commercial opportunity intelligence for local businesses." />
+    <meta property="og:title" content="AI Local Business Opportunity Finder" />
+    <meta property="og:description" content="AI-powered discovery, compliance auditing, website health, and commercial opportunity intelligence for local businesses." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "AI Local Business Opportunity Finder",
+  "description": "AI-powered discovery, compliance auditing, website health, and commercial opportunity intelligence for local businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
